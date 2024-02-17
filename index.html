@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- CSS only -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Daisy -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#1DD100",
+              dark: "#030712",
+              "dark-60": "#03071299",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body>
+    <header class="container mx-auto">
+      <nav></nav>
+    </header>
+    <main></main>
+    <footer></footer>
+    <script src="js/main.js"></script>
+  </body>
+</html>
