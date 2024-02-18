@@ -206,7 +206,8 @@
     <main
       class="bg-[#F7F8F8] rounded-t-[120px] border-t-4 border-primary p-4 lg:p-0"
     >
-      <section class="container mx-auto mt-24">
+      <section class="container mx-auto mt-32">
+        <!-- Header Of ticket -->
         <div class="flex justify-center flex-col items-center">
           <h1 class="text-5xl font-extrabold mb-6">Ph Prosadds</h1>
           <p class="text-dark-100 text-xl w-[80%] lg:w-[60%] text-center">
@@ -214,7 +215,7 @@
             app. The integrated testing features allow for a streamlined .
           </p>
         </div>
-
+        <!-- Ticket Description -->
         <div
           class="bg-white rounded-3xl p-4 lg:p-14 mt-10 w-full flex flex-col lg:flex-row"
         >
@@ -276,19 +277,20 @@
           </div>
         </div>
 
+        <!-- Seat Selecting -->
         <div
           class="bg-white rounded-3xl p-4 lg:p-14 mt-10 w-full grid grid-cols-1 lg:grid-cols-4"
         >
           <div class="col-span-3">
-            <h1>Select Seat</h1>
+            <h1 class="text-2xl font-semibold">Select Your Seat</h1>
             <hr
               class="h-[1px] w-full border border-dashed border-primary my-5"
             />
             <div class="flex justify-between">
-              <div class="flex gap-2">
+              <div class="flex gap-2 text-2xl font-semibold">
                 <img src="images/seat-gray.png" alt="" />Available
               </div>
-              <div class="flex gap-2">
+              <div class="flex gap-2 text-2xl font-semibold text-primary">
                 <img src="images/seat-green.png" alt="" /> Selected Seat
               </div>
             </div>
@@ -337,7 +339,7 @@
               </div>
             </div>
             <div
-              class="flex items-center justify-between my-5 text-dark-100 font-inter gap-1 gap-1"
+              class="flex items-center justify-between my-5 text-dark-100 font-inter gap-1"
             >
               <span>B</span>
               <div class="flex gap-2">
@@ -653,7 +655,7 @@
                     <li>
                       Seat
                       <span class="bg-primary text-white rounded-3xl px-1"
-                        >2</span
+                        >1</span
                       >
                     </li>
                     <li>Class</li>
@@ -662,16 +664,14 @@
                   <hr
                     class="h-[1px] w-full border border-dashed border-primary my-5"
                   />
-                  <ul class="flex justify-between">
-                    <li>Seat</li>
-                    <li>Class</li>
-                    <li>Price</li>
+                  <ul class="flex justify-between font-inter text-dark-100">
+                    <li>1</li>
+                    <li>Economy</li>
+                    <li class="flex gap-2">
+                      550 <img src="images/fare.png" alt="" class="h-6" />
+                    </li>
                   </ul>
-                  <ul class="flex justify-between">
-                    <li>Seat</li>
-                    <li>Class</li>
-                    <li>Price</li>
-                  </ul>
+
                   <hr
                     class="h-[1px] w-full border border-dashed border-primary my-5"
                   />
@@ -779,8 +779,47 @@
           </div>
         </div>
       </section>
+      <div class="h-32"></div>
     </main>
-    <footer class="bg-dark h-[550px]"></footer>
+    <!-- Footer  Section-->
+    <footer class="bg-dark py-28 px-12 lg:p-0">
+      <div class="container mx-auto">
+        <div
+          class="text-white flex justify-between flex-col md:flex-row mb-10 lg:mb-0"
+        >
+          <div class="space-y-4">
+            <h1 class="text-4xl font-extrabold">P-ticekt</h1>
+            <p class="text-gray-400 lg:w-[400px]">
+              P-Ticket is a digital platform to make your daily commuting
+              better.
+            </p>
+          </div>
+          <div class="space-y-4">
+            <h1 class="text-center">Download Our App</h1>
+            <div
+              class="flex border-2 border-white bg-black rounded-2xl p-4 gap-4"
+            >
+              <img src="images/playstore.png" alt="" />
+              <div class="font-inter">
+                <p>GET IT ON</p>
+                <h1>Google Play</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr class="h-[1px] w-full border border-dashed border-gray-500 my-10" />
+        <div class="flex justify-between flex-col lg:flex-row">
+          <div class="text-gray-400 mb-10 lg:mb-0">
+            @all rights reserved, P-Ticket services limited.2024
+          </div>
+          <ul class="grid grid-cols-3 gap-6 text-white">
+            <li>Terms & condition</li>
+            <li>Return & refund policy</li>
+            <li>Privacy policy</li>
+          </ul>
+        </div>
+      </div>
+    </footer>
     <script src="js/main.js"></script>
   </body>
 </html>
