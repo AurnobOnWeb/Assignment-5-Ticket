@@ -640,15 +640,22 @@
               class="lg:w-[1px] lg:h-full lg:border lg:border-dashed lg:border-primary lg:mx-5"
             />
             <div class="w-full">
-              <h1>Select Seat</h1>
+              <h1 class="text-2xl font-semibold">Select Your Seat</h1>
               <hr
                 class="h-[1px] w-full border border-dashed border-primary my-5"
               />
 
-              <div>
+              <div class="bg-[#F7F8F8] p-6 rounded-3xl">
                 <div>
-                  <ul class="flex justify-between">
-                    <li>Seat</li>
+                  <ul
+                    class="flex justify-between font-inter text-dark font-semibold"
+                  >
+                    <li>
+                      Seat
+                      <span class="bg-primary text-white rounded-3xl px-1"
+                        >2</span
+                      >
+                    </li>
                     <li>Class</li>
                     <li>Price</li>
                   </ul>
@@ -673,12 +680,52 @@
                 <div class="flex justify-between">
                   Total Price <span>0</span>
                 </div>
-                <div>Coupon</div>
+                <div class="my-4">
+                  <label
+                    for="search"
+                    class="mb-2 text-sm font-medium text-gray-900 sr-only"
+                    >Search</label
+                  >
+                  <div class="relative">
+                    <div
+                      class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none"
+                    >
+                      <svg
+                        class="w-4 h-4 text-gray-500"
+                        aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 20 20"
+                      >
+                        <path
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
+                        />
+                      </svg>
+                    </div>
+                    <input
+                      type="search"
+                      id="search"
+                      class="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-primary-500 focus:border-primary-500 outline-none"
+                      placeholder="Search"
+                      required
+                    />
+                    <button
+                      type="submit"
+                      class="text-white absolute end-2.5 bottom-2.5 bg-primary hover:bg-primary focus:ring-4 focus:outline-none focus:ring-primary font-medium rounded-lg text-sm px-4 py-2"
+                    >
+                      Search
+                    </button>
+                  </div>
+                </div>
                 <div class="flex justify-between">
                   Grand Total <span>0</span>
                 </div>
               </div>
-              <div class="w-full">
+              <div class="w-full mt-6">
                 <label class="form-control w-full">
                   <div class="label">
                     <span class="label-text font-inter font-semibold"
@@ -715,13 +762,25 @@
                     class="input input-bordered w-full"
                   />
                 </label>
+                <button
+                  class="btn w-full bg-primary hover:bg-primary-500 text-white font-inter my-6 text-xl"
+                >
+                  Next
+                </button>
+
+                <div
+                  class="flex justify-center text-sm underline text-dark-100 gap-4 font-medium"
+                >
+                  <a href="/">Terms and Conditions</a>
+                  <a href="/">Cancellation Policy</a>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
     </main>
-    <footer></footer>
+    <footer class="bg-dark h-[550px]"></footer>
     <script src="js/main.js"></script>
   </body>
 </html>
