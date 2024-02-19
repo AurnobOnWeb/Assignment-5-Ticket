@@ -61,7 +61,7 @@
               >
                 <li><a>Home</a></li>
                 <li><a>About</a></li>
-                <li><a>Destination</a></li>
+                <li><a onclick="scrollToSection()">Destination</a></li>
                 <li><a>Search</a></li>
               </ul>
             </div>
@@ -71,7 +71,7 @@
             <ul class="menu menu-horizontal px-1">
               <li><a>Home</a></li>
               <li><a>About</a></li>
-              <li><a>Destination</a></li>
+              <li><a onclick="scrollToSection()">Destination</a></li>
               <li><a>Search</a></li>
             </ul>
           </div>
@@ -206,7 +206,7 @@
     <main
       class="bg-[#F7F8F8] rounded-t-[120px] border-t-4 border-primary p-4 lg:p-0"
     >
-      <section class="container mx-auto mt-32">
+      <section class="container mx-auto mt-32" id="ticketPurchasing">
         <!-- Header Of ticket -->
         <div class="flex justify-center flex-col items-center">
           <h1 class="text-5xl font-extrabold mb-6">Ph Prosadds</h1>
@@ -234,7 +234,7 @@
                 class="btn bg-primary-200 text-primary text-xl font-inter hover:bg-primary-100 my-5 lg:my-0"
               >
                 <img src="images/seat-green.png" alt="" />
-                <span>40</span> Seat Left
+                <span id="seatLeft">40</span> Seat Left
               </button>
             </div>
             <div class="bg-[#F7F8F8] rounded-3xl p-8">
@@ -272,7 +272,9 @@
             class="lg:w-[20%] flex items-center flex-col justify-center space-y-3"
           >
             <img src="images/fare.png" alt="" class="mt-10 lg:mt-0" />
-            <span class="font-bold text-4xl">550 Taka</span>
+            <span class="font-bold text-4xl"
+              ><span class="BasePrice">550</span> Taka</span
+            >
             <h2 class="text-dark-100 text-2xl">Per Seat</h2>
           </div>
         </div>
@@ -282,15 +284,17 @@
           class="bg-white rounded-3xl p-4 lg:p-14 mt-10 w-full grid grid-cols-1 lg:grid-cols-4"
         >
           <div class="col-span-3">
-            <h1 class="text-2xl font-semibold">Select Your Seat</h1>
+            <h1 class="text-xl font-semibold">Select Your Seat</h1>
             <hr
               class="h-[1px] w-full border border-dashed border-primary my-5"
             />
             <div class="flex justify-between">
-              <div class="flex gap-2 text-2xl font-semibold">
+              <div class="flex gap-2 text-xl font-semibold">
                 <img src="images/seat-gray.png" alt="" />Available
               </div>
-              <div class="flex gap-2 text-2xl font-semibold text-primary">
+              <div
+                class="flex gap-2 items-center justify-center font-semibold text-primary"
+              >
                 <img src="images/seat-green.png" alt="" /> Selected Seat
               </div>
             </div>
@@ -305,336 +309,8 @@
               </div>
             </div>
             <!-- seat map -->
-            <div
-              class="flex items-center justify-between my-5 text-dark-100 font-inter gap-1"
-            >
-              <span>A</span>
-              <div class="flex gap-2">
-                <button
-                  class="btn px-10 lg:px-14 text-dark-100 bg-[#F7F8F8]"
-                  id="A1"
-                >
-                  A1
-                </button>
-                <button
-                  class="btn px-10 lg:px-14 text-dark-100 bg-[#F7F8F8]"
-                  id="A2"
-                >
-                  A2
-                </button>
-              </div>
-              <div class="flex gap-2">
-                <button
-                  class="btn px-10 lg:px-14 text-dark-100 bg-[#F7F8F8]"
-                  id="A3"
-                >
-                  A3
-                </button>
-                <button
-                  class="btn px-10 lg:px-14 text-dark-100 bg-[#F7F8F8]"
-                  id="A4"
-                >
-                  A4
-                </button>
-              </div>
-            </div>
-            <div
-              class="flex items-center justify-between my-5 text-dark-100 font-inter gap-1"
-            >
-              <span>B</span>
-              <div class="flex gap-2">
-                <button
-                  class="btn px-10 lg:px-14 text-dark-100 bg-[#F7F8F8]"
-                  id="B1"
-                >
-                  B1
-                </button>
-                <button
-                  class="btn px-10 lg:px-14 text-dark-100 bg-[#F7F8F8]"
-                  id="B2"
-                >
-                  B2
-                </button>
-              </div>
-              <div class="flex gap-2">
-                <button
-                  class="btn px-10 lg:px-14 text-dark-100 bg-[#F7F8F8]"
-                  id="B3"
-                >
-                  B3
-                </button>
-                <button
-                  class="btn px-10 lg:px-14 text-dark-100 bg-[#F7F8F8]"
-                  id="B4"
-                >
-                  B4
-                </button>
-              </div>
-            </div>
-            <div
-              class="flex items-center justify-between my-5 text-dark-100 font-inter gap-1"
-            >
-              <span>C</span>
-              <div class="flex gap-2">
-                <button
-                  class="btn px-10 lg:px-14 text-dark-100 bg-[#F7F8F8]"
-                  id="C1"
-                >
-                  C1
-                </button>
-                <button
-                  class="btn px-10 lg:px-14 text-dark-100 bg-[#F7F8F8]"
-                  id="C2"
-                >
-                  C2
-                </button>
-              </div>
-              <div class="flex gap-2">
-                <button
-                  class="btn px-10 lg:px-14 text-dark-100 bg-[#F7F8F8]"
-                  id="C3"
-                >
-                  C3
-                </button>
-                <button
-                  class="btn px-10 lg:px-14 text-dark-100 bg-[#F7F8F8]"
-                  id="C4"
-                >
-                  C4
-                </button>
-              </div>
-            </div>
-            <div
-              class="flex items-center justify-between my-5 text-dark-100 font-inter gap-1"
-            >
-              <span>D</span>
-              <div class="flex gap-2">
-                <button
-                  class="btn px-10 lg:px-14 text-dark-100 bg-[#F7F8F8]"
-                  id="D1"
-                >
-                  D1
-                </button>
-                <button
-                  class="btn px-10 lg:px-14 text-dark-100 bg-[#F7F8F8]"
-                  id="D2"
-                >
-                  D2
-                </button>
-              </div>
-              <div class="flex gap-2">
-                <button
-                  class="btn px-10 lg:px-14 text-dark-100 bg-[#F7F8F8]"
-                  id="D3"
-                >
-                  D3
-                </button>
-                <button
-                  class="btn px-10 lg:px-14 text-dark-100 bg-[#F7F8F8]"
-                  id="D4"
-                >
-                  D4
-                </button>
-              </div>
-            </div>
-            <div
-              class="flex items-center justify-between my-5 text-dark-100 font-inter gap-1"
-            >
-              <span>E</span>
-              <div class="flex gap-2">
-                <button
-                  class="btn px-10 lg:px-14 text-dark-100 bg-[#F7F8F8]"
-                  id="E1"
-                >
-                  E1
-                </button>
-                <button
-                  class="btn px-10 lg:px-14 text-dark-100 bg-[#F7F8F8]"
-                  id="E2"
-                >
-                  E2
-                </button>
-              </div>
-              <div class="flex gap-2">
-                <button
-                  class="btn px-10 lg:px-14 text-dark-100 bg-[#F7F8F8]"
-                  id="E3"
-                >
-                  E3
-                </button>
-                <button
-                  class="btn px-10 lg:px-14 text-dark-100 bg-[#F7F8F8]"
-                  id="E4"
-                >
-                  E4
-                </button>
-              </div>
-            </div>
-            <div
-              class="flex items-center justify-between my-5 text-dark-100 font-inter gap-1"
-            >
-              <span>F</span>
-              <div class="flex gap-2">
-                <button
-                  class="btn px-10 lg:px-14 text-dark-100 bg-[#F7F8F8]"
-                  id="F1"
-                >
-                  F1
-                </button>
-                <button
-                  class="btn px-10 lg:px-14 text-dark-100 bg-[#F7F8F8]"
-                  id="F2"
-                >
-                  F2
-                </button>
-              </div>
-              <div class="flex gap-2">
-                <button
-                  class="btn px-10 lg:px-14 text-dark-100 bg-[#F7F8F8]"
-                  id="F3"
-                >
-                  F3
-                </button>
-                <button
-                  class="btn px-10 lg:px-14 text-dark-100 bg-[#F7F8F8]"
-                  id="F4"
-                >
-                  F4
-                </button>
-              </div>
-            </div>
-            <div
-              class="flex items-center justify-between my-5 text-dark-100 font-inter gap-1"
-            >
-              <span>G</span>
-              <div class="flex gap-2">
-                <button
-                  class="btn px-10 lg:px-14 text-dark-100 bg-[#F7F8F8]"
-                  id="G1"
-                >
-                  G1
-                </button>
-                <button
-                  class="btn px-10 lg:px-14 text-dark-100 bg-[#F7F8F8]"
-                  id="G2"
-                >
-                  G2
-                </button>
-              </div>
-              <div class="flex gap-2">
-                <button
-                  class="btn px-10 lg:px-14 text-dark-100 bg-[#F7F8F8]"
-                  id="G3"
-                >
-                  G3
-                </button>
-                <button
-                  class="btn px-10 lg:px-14 text-dark-100 bg-[#F7F8F8]"
-                  id="G4"
-                >
-                  G4
-                </button>
-              </div>
-            </div>
-            <div
-              class="flex items-center justify-between my-5 text-dark-100 font-inter gap-1"
-            >
-              <span>H</span>
-              <div class="flex gap-2">
-                <button
-                  class="btn px-10 lg:px-14 text-dark-100 bg-[#F7F8F8]"
-                  id="H1"
-                >
-                  H1
-                </button>
-                <button
-                  class="btn px-10 lg:px-14 text-dark-100 bg-[#F7F8F8]"
-                  id="H2"
-                >
-                  H2
-                </button>
-              </div>
-              <div class="flex gap-2">
-                <button
-                  class="btn px-10 lg:px-14 text-dark-100 bg-[#F7F8F8]"
-                  id="H3"
-                >
-                  H3
-                </button>
-                <button
-                  class="btn px-10 lg:px-14 text-dark-100 bg-[#F7F8F8]"
-                  id="H4"
-                >
-                  H4
-                </button>
-              </div>
-            </div>
-            <div
-              class="flex items-center justify-between my-5 text-dark-100 font-inter gap-1"
-            >
-              <span>I</span>
-              <div class="flex gap-2">
-                <button
-                  class="btn px-10 lg:px-14 text-dark-100 bg-[#F7F8F8]"
-                  id="I1"
-                >
-                  I1
-                </button>
-                <button
-                  class="btn px-10 lg:px-14 text-dark-100 bg-[#F7F8F8]"
-                  id="I2"
-                >
-                  I2
-                </button>
-              </div>
-              <div class="flex gap-2">
-                <button
-                  class="btn px-10 lg:px-14 text-dark-100 bg-[#F7F8F8]"
-                  id="I3"
-                >
-                  I3
-                </button>
-                <button
-                  class="btn px-10 lg:px-14 text-dark-100 bg-[#F7F8F8]"
-                  id="I4"
-                >
-                  I4
-                </button>
-              </div>
-            </div>
-            <div
-              class="flex items-center justify-between my-5 text-dark-100 font-inter gap-1"
-            >
-              <span>J</span>
-              <div class="flex gap-2">
-                <button
-                  class="btn px-10 lg:px-14 text-dark-100 bg-[#F7F8F8]"
-                  id="J1"
-                >
-                  J1
-                </button>
-                <button
-                  class="btn px-10 lg:px-14 text-dark-100 bg-[#F7F8F8]"
-                  id="J2"
-                >
-                  J2
-                </button>
-              </div>
-              <div class="flex gap-2">
-                <button
-                  class="btn px-10 lg:px-14 text-dark-100 bg-[#F7F8F8]"
-                  id="J3"
-                >
-                  J3
-                </button>
-                <button
-                  class="btn px-10 lg:px-14 text-dark-100 bg-[#F7F8F8]"
-                  id="J4"
-                >
-                  J4
-                </button>
-              </div>
-            </div>
+            <div id="seat-container" class=""></div>
+            <!-- seat map -->
           </div>
 
           <div class="flex">
@@ -642,11 +318,28 @@
               class="lg:w-[1px] lg:h-full lg:border lg:border-dashed lg:border-primary lg:mx-5"
             />
             <div class="w-full">
-              <h1 class="text-2xl font-semibold">Select Your Seat</h1>
+              <h1 class="text-xl font-semibold">Select Your Seat</h1>
               <hr
                 class="h-[1px] w-full border border-dashed border-primary my-5"
               />
-
+              <div id="errors" class="hidden mb-4">
+                <div role="alert" class="alert alert-error text-white">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="stroke-current shrink-0 h-6 w-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"
+                    />
+                  </svg>
+                  <span>Error! You can't select more than 4 seats.</span>
+                </div>
+              </div>
               <div class="bg-[#F7F8F8] p-6 rounded-3xl">
                 <div>
                   <ul
@@ -654,8 +347,10 @@
                   >
                     <li>
                       Seat
-                      <span class="bg-primary text-white rounded-3xl px-1"
-                        >1</span
+                      <span
+                        class="bg-primary text-white rounded-3xl px-1"
+                        id="seatCount"
+                        >0</span
                       >
                     </li>
                     <li>Class</li>
@@ -664,65 +359,58 @@
                   <hr
                     class="h-[1px] w-full border border-dashed border-primary my-5"
                   />
-                  <ul class="flex justify-between font-inter text-dark-100">
-                    <li>1</li>
-                    <li>Economy</li>
-                    <li class="flex gap-2">
-                      550 <img src="images/fare.png" alt="" class="h-6" />
-                    </li>
-                  </ul>
+                  <div id="selected-seats">
+                    <ul class="flex justify-between font-inter text-dark-100">
+                      <li>Select seat</li>
+                      <li>select Class</li>
+                      <li class="flex gap-2">
+                        <img src="images/fare.png" alt="" class="h-6" />
+                      </li>
+                    </ul>
+                  </div>
 
                   <hr
                     class="h-[1px] w-full border border-dashed border-primary my-5"
                   />
                 </div>
 
-                <div class="flex justify-between">
-                  Total Price <span>0</span>
+                <div class="flex justify-between font-bold font-inter my-5">
+                  Total Price
+                  <div>BDT <span id="totalPrice">0</span></div>
                 </div>
-                <div class="my-4">
+                <div class="my-4" id="couponDiv">
                   <label
-                    for="search"
+                    for="Coupon"
                     class="mb-2 text-sm font-medium text-gray-900 sr-only"
-                    >Search</label
+                    >Coupon</label
                   >
                   <div class="relative">
                     <div
                       class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none"
                     >
-                      <svg
-                        class="w-4 h-4 text-gray-500"
-                        aria-hidden="true"
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 20 20"
-                      >
-                        <path
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
-                        />
-                      </svg>
+                      <img src="images/ticket-cupon.png" alt="" class="h-6" />
                     </div>
                     <input
-                      type="search"
-                      id="search"
-                      class="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-primary-500 focus:border-primary-500 outline-none"
-                      placeholder="Search"
+                      type="text"
+                      id="coupon"
+                      class="font-inter block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-primary-500 focus:border-primary-500 outline-none"
+                      placeholder="Enter Your Coupon"
                       required
+                      onkeyup="enableCoupon()"
                     />
                     <button
-                      type="submit"
-                      class="text-white absolute end-2.5 bottom-2.5 bg-primary hover:bg-primary focus:ring-4 focus:outline-none focus:ring-primary font-medium rounded-lg text-sm px-4 py-2"
+                      onclick="calculatePrice()"
+                      id="setCoupons"
+                      class="text-white absolute end-2.5 bottom-2.5 bg-primary focus:outline-none font-medium rounded-lg text-sm px-4 py-2 disabled:bg-gray-400"
+                      disabled
                     >
-                      Search
+                      Apply
                     </button>
                   </div>
                 </div>
-                <div class="flex justify-between">
-                  Grand Total <span>0</span>
+                <div class="flex justify-between font-bold font-inter my-5">
+                  Grand Total
+                  <div>BDT <span id="GrandPrice">0</span></div>
                 </div>
               </div>
               <div class="w-full mt-6">
@@ -782,7 +470,7 @@
       <div class="h-32"></div>
     </main>
     <!-- Footer  Section-->
-    <footer class="bg-dark py-28 px-12 lg:p-0">
+    <footer class="bg-dark lg:py-28 p-12 lg:p-0">
       <div class="container mx-auto">
         <div
           class="text-white flex justify-between flex-col md:flex-row mb-10 lg:mb-0"
@@ -820,6 +508,8 @@
         </div>
       </div>
     </footer>
+    <script src="js/seatGenarates.js"></script>
+    <script src="js/baseFunctions.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>
