@@ -15,8 +15,13 @@ function removeColor(color) {
 }
 
 function enableCoupon() {
+  const bookedSeats = selectedSeats.length;
   const couponEnable = document.getElementById("setCoupons");
-  couponEnable.disabled = false;
+  if (bookedSeats === 4) {
+    couponEnable.disabled = false;
+  } else {
+    couponEnable.disabled = true;
+  }
 }
 function removeCouponField() {
   const element = document.getElementById("couponDiv");
@@ -90,23 +95,55 @@ function appendSeat() {
 let price = 0;
 let GrandPrice = 0;
 
+function addDiscount() {
+  const discountedPriceContainer = document.getElementById(
+    "discountedPriceContainer"
+  );
+  discountedPriceContainer.classList.remove("hidden");
+
+  const discountedPrice = document.getElementById("discountedPrice");
+  discountedPrice.innerText = price - GrandPrice;
+}
+function removeDiscount() {
+  const discountedPriceContainer = document.getElementById(
+    "discountedPriceContainer"
+  );
+  discountedPriceContainer.classList.add("hidden");
+}
+
 function calculatePrice() {
   const coupon = setCoupon();
   const bookedSeats = selectedSeats.length;
-  if (coupon != null && coupon === "NEW15") {
+  if (coupon === "NEW15" && bookedSeats === 4) {
     price = 550 * bookedSeats;
     GrandPrice = Math.round((price / 100) * 85);
+    addDiscount();
     removeCouponField();
-  } else if (coupon != null && coupon === "Couple 20") {
+  } else if (coupon === "Couple 20" && bookedSeats === 4) {
     price = 550 * bookedSeats;
     GrandPrice = Math.round((price / 100) * 80);
+    addDiscount();
     removeCouponField();
   } else {
     price = 550 * bookedSeats;
+    GrandPrice = price;
   }
 
   const priceContainer = document.getElementById("totalPrice");
   priceContainer.innerText = price;
   const grandPriceContainer = document.getElementById("GrandPrice");
   grandPriceContainer.innerText = GrandPrice;
+}
+
+function numberAdded(event) {
+  const number = event.key;
+  const typed = number.length;
+  const bookedSeats = selectedSeats.length;
+  const submitButton = document.getElementById("submitButton");
+
+  if (typed && bookedSeats > 0) {
+    submitButton.disabled = false;
+  } else {
+    submitButton.disabled = true;
+  }
 }

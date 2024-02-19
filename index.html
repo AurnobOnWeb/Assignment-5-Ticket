@@ -3,9 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>SundorBon - Poribohon Search</title>
     <!-- CSS only -->
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="shortcut icon" href="images/busIcon.png" type="image/x-icon" />
     <!-- Daisy -->
     <link
       href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css"
@@ -61,17 +62,17 @@
               >
                 <li><a>Home</a></li>
                 <li><a>About</a></li>
-                <li><a onclick="scrollToSection()">Destination</a></li>
+                <li><a onclick="">Destination</a></li>
                 <li><a>Search</a></li>
               </ul>
             </div>
-            <a class="text-2xl font-extrabold">Ticket</a>
+            <a class="text-2xl font-extrabold">SundorBon Ticket</a>
           </div>
           <div class="navbar-center hidden lg:flex">
             <ul class="menu menu-horizontal px-1">
               <li><a>Home</a></li>
               <li><a>About</a></li>
-              <li><a onclick="scrollToSection()">Destination</a></li>
+              <li><a>Destination</a></li>
               <li><a>Search</a></li>
             </ul>
           </div>
@@ -91,14 +92,17 @@
           End-to-End Travel with
         </h1>
         <span class="text-6xl text-primary font-extrabold my-6">
-          P Paribahan</span
+          SundorBon Poribohon</span
         >
         <p class="w-[80%] md:w-[60%] lg:w-[55%] text-white opacity-75 mb-6">
-          Yes, you can run unit tests and view the results directly within the
-          app. The integrated testing features allow for a streamlined .
+          Bus travel can be a fascinating journey, blending the practicality of
+          transportation with the adventure of exploration. Picture stepping
+          onto a bustling street corner, the air filled with the scent of
+          exhaust and anticipation.
         </p>
         <button
           class="btn bg-primary border-none hover:bg-primary-500 hover:text-white font-extrabold"
+          onclick="scrollToSection()"
         >
           Buy Ticket
         </button>
@@ -120,19 +124,19 @@
           <div
             class="bg-white w-full lg:w-[300px] flex gap-6 py-6 px-8 border-b-4 border-primary rounded-2xl"
           >
-            <img src="images/people.png" alt="" />
+            <img src="images/ticket-cupon.png" alt="" />
             <div class="space-y-2">
-              <h1 class="font-inter font-extrabold text-3xl">600k +</h1>
-              <p>Users Register</p>
+              <h1 class="font-inter font-extrabold text-3xl">1.7 lacks +</h1>
+              <p>Tickets sold</p>
             </div>
           </div>
           <div
             class="bg-white w-full lg:w-[300px] flex gap-6 py-6 px-8 border-b-4 border-primary rounded-2xl"
           >
-            <img src="images/people.png" alt="" />
+            <img src="images/stoppage.png" alt="" />
             <div class="space-y-2">
-              <h1 class="font-inter font-extrabold text-3xl">600k +</h1>
-              <p>Users Register</p>
+              <h1 class="font-inter font-extrabold text-3xl">80K+</h1>
+              <p>Rental partners</p>
             </div>
           </div>
         </div>
@@ -171,9 +175,9 @@
           <!-- offer 2 -->
           <div class="bg-[#F78C9C] rounded-3xl p-14 mt-10 w-full flex">
             <div class="w-[60%] space-y-3">
-              <h1 class="font-extrabold text-4xl">15% OFF</h1>
+              <h1 class="font-extrabold text-4xl">20% OFF</h1>
               <p class="font-semibold text-3xl">on your next purchase</p>
-              <p class="text-2xl text-dark-100">use by January 2024</p>
+              <p class="text-2xl text-dark-100">use by couple January 2024</p>
             </div>
             <div class="w-[10%] relative flex justify-center items-center">
               <div
@@ -189,7 +193,7 @@
             <div
               class="w-[30%] flex items-center flex-col justify-center space-y-3"
             >
-              <span class="font-bold text-4xl">NEW15</span>
+              <span class="font-bold text-4xl">Couple 20</span>
               <h2 class="text-dark-100 text-2xl">Coupon Code</h2>
             </div>
           </div>
@@ -209,10 +213,13 @@
       <section class="container mx-auto mt-32" id="ticketPurchasing">
         <!-- Header Of ticket -->
         <div class="flex justify-center flex-col items-center">
-          <h1 class="text-5xl font-extrabold mb-6">Ph Prosadds</h1>
+          <h1 class="text-5xl font-extrabold mb-6">SundorBon Poribohon</h1>
           <p class="text-dark-100 text-xl w-[80%] lg:w-[60%] text-center">
-            Yes, you can run unit tests and view the results directly within the
-            app. The integrated testing features allow for a streamlined .
+            As you board, there's a sense of communal energy, as fellow
+            travelers of all ages and backgrounds settle into their seats. The
+            interior is a microcosm of society itself, with conversations in
+            various languages, laughter, and occasional snippets of music from
+            someone's earphones.
           </p>
         </div>
         <!-- Ticket Description -->
@@ -240,7 +247,7 @@
             <div class="bg-[#F7F8F8] rounded-3xl p-8">
               <div class="flex justify-between">
                 <h1 class="font-2xl font-dark font-bold">Route</h1>
-                <h1 class="font-2xl font-dark font-bold">Dhaka - Sylhet</h1>
+                <h1 class="font-2xl font-dark font-bold">Dhaka - Khulna</h1>
               </div>
               <hr class="w-full border border-dashed border-primary my-5" />
               <div class="flex justify-between">
@@ -251,8 +258,8 @@
               <div
                 class="flex flex-col lg:flex-row xl:gap-6 lg:gap-2 font-inter gap-4"
               >
-                <button class="btn">Boarding Point -Laxmipur</button>
-                <button class="btn">Dropping Point - Bogura</button>
+                <button class="btn">Boarding Point - Faridpur</button>
+                <button class="btn">Dropping Point - Jhenaidah</button>
                 <button class="btn">Est. Time - 11 Hour</button>
               </div>
             </div>
@@ -340,6 +347,7 @@
                   <span>Error! You can't select more than 4 seats.</span>
                 </div>
               </div>
+
               <div class="bg-[#F7F8F8] p-6 rounded-3xl">
                 <div>
                   <ul
@@ -408,6 +416,13 @@
                     </button>
                   </div>
                 </div>
+                <div
+                  class="flex justify-between font-bold font-inter my-5 hidden"
+                  id="discountedPriceContainer"
+                >
+                  Discounted Price
+                  <div>BDT <span id="discountedPrice">0</span></div>
+                </div>
                 <div class="flex justify-between font-bold font-inter my-5">
                   Grand Total
                   <div>BDT <span id="GrandPrice">0</span></div>
@@ -429,33 +444,64 @@
                 <label class="form-control w-full">
                   <div class="label">
                     <span class="label-text font-inter font-semibold"
-                      >Passenger Name *</span
+                      >Passenger Number *</span
                     >
                   </div>
                   <input
-                    type="text"
-                    placeholder="Enter Your Name"
+                    type="number"
+                    placeholder="Enter Your Phone Number"
                     class="input input-bordered w-full"
+                    onkeyup="numberAdded(event)"
                   />
                 </label>
                 <label class="form-control w-full">
                   <div class="label">
                     <span class="label-text font-inter font-semibold"
-                      >Passenger Name *</span
+                      >Passenger email *</span
                     >
                   </div>
                   <input
-                    type="text"
-                    placeholder="Enter Your Name"
+                    type="email"
+                    placeholder="Enter Your Email"
                     class="input input-bordered w-full"
                   />
                 </label>
+
                 <button
                   class="btn w-full bg-primary hover:bg-primary-500 text-white font-inter my-6 text-xl"
+                  disabled
+                  onclick="my_modal_5.showModal()"
+                  id="submitButton"
                 >
                   Next
                 </button>
+                <dialog id="my_modal_5" class="modal">
+                  <div class="modal-box">
+                    <div
+                      class="flex justify-center items-center flex-col gap-6 p-8"
+                    >
+                      <img src="images/success.png" alt="" />
+                      <h1>SUCCESS</h1>
 
+                      <p class="text-center font-semibold">
+                        Thank you for Booking Our Bus Seats. We are working hard
+                        to find the best service and deals for you
+                      </p>
+                      <p class="text-center">
+                        Shortly you will find a confirmation in your email.
+                      </p>
+                      <div class="modal-action">
+                        <form method="dialog">
+                          <button
+                            class="btn px-12 bg-primary hover:bg-primary-500 rounded-3xl text-white"
+                          >
+                            Continue
+                          </button>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </dialog>
                 <div
                   class="flex justify-center text-sm underline text-dark-100 gap-4 font-medium"
                 >
@@ -476,10 +522,11 @@
           class="text-white flex justify-between flex-col md:flex-row mb-10 lg:mb-0"
         >
           <div class="space-y-4">
-            <h1 class="text-4xl font-extrabold">P-ticekt</h1>
+            <h1 class="text-4xl font-extrabold">SundorBon</h1>
             <p class="text-gray-400 lg:w-[400px]">
-              P-Ticket is a digital platform to make your daily commuting
-              better.
+              The rhythmic hum of the engine and the occasional lurch as the bus
+              navigates turns and bumps along the road create a soothing
+              backdrop to the journey.
             </p>
           </div>
           <div class="space-y-4">
@@ -498,7 +545,7 @@
         <hr class="h-[1px] w-full border border-dashed border-gray-500 my-10" />
         <div class="flex justify-between flex-col lg:flex-row">
           <div class="text-gray-400 mb-10 lg:mb-0">
-            @all rights reserved, P-Ticket services limited.2024
+            @all rights reserved, SundorBon services limited.2024
           </div>
           <ul class="grid grid-cols-3 gap-6 text-white">
             <li>Terms & condition</li>

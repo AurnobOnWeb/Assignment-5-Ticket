@@ -11,6 +11,8 @@ function selectSeat(seatId) {
       appendSeat();
       calculatePrice();
       decreaseSeat();
+      enableCoupon();
+      numberAdded();
     } else {
       console.log("");
       const error = document.getElementById("errors");
@@ -22,5 +24,8 @@ function selectSeat(seatId) {
     calculatePrice();
     appendSeat();
     increaseSeat();
+    removeDiscount();
+    enableCoupon();
+    numberAdded();
   }
 }
